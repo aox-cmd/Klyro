@@ -1,5 +1,8 @@
 # Klyro
 
+[![Klyro CI](https://github.com/aox-cmd/Klyro/actions/workflows/ci.yml/badge.svg)](https://github.com/aox-cmd/Klyro/actions/workflows/ci.yml)
+
+
 **A full-stack project management application with a Kanban task board.**
 
 Klyro helps users organize projects, manage tasks, and track progress through a simple, interactive dashboard.
