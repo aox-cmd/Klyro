@@ -1,0 +1,400 @@
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at top, #25275b, #0b1020 65%);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px;
+  background: #161d33;
+  border: 1px solid #303b58;
+  border-radius: 20px;
+  box-shadow: 0 24px 70px #0005;
+}
+
+.auth-card h1,
+.dashboard-header h1 {
+  color: #a5a0ff;
+  margin: 0;
+  font-size: 32px;
+}
+
+.auth-card p,
+.dashboard-header p,
+.project-card p {
+  color: #a5aec2;
+}
+
+.auth-card h2 {
+  margin-top: 32px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0d1428;
+  color: white;
+  border: 1px solid #394563;
+  border-radius: 9px;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #8178ff;
+  outline-offset: 1px;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background: #7668ed;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.text-button {
+  background: transparent;
+  border: none;
+  color: #aaa4ff;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.error {
+  color: #ff9c9c !important;
+}
+
+.dashboard {
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 6%;
+  border-bottom: 1px solid #303b58;
+}
+
+.dashboard-header button {
+  background: #252e47;
+  border: 1px solid #46516e;
+  border-radius: 9px;
+  color: white;
+  padding: 10px 18px;
+}
+
+.dashboard-content {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.project-form,
+.project-card {
+  padding: 24px;
+  background: #161d33;
+  border: 1px solid #303b58;
+  border-radius: 14px;
+}
+
+.project-form {
+  max-width: 600px;
+  margin: 24px 0 32px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #233f3d;
+  color: #9be2b8;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    padding: 18px;
+  }
+
+  .auth-card {
+    padding: 24px;
+  }
+}
+
+
+/* Project selection */
+
+.project-select {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.project-select:hover {
+  border-color: #8178ff;
+  transform: translateY(-2px);
+}
+
+.project-select.selected {
+  border-color: #8178ff;
+  box-shadow: 0 0 0 1px #8178ff;
+}
+
+/* Kanban */
+
+.kanban-section {
+  margin-top: 48px;
+}
+
+.kanban-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.kanban-heading h2 {
+  margin-bottom: 6px;
+}
+
+.kanban-heading p {
+  margin: 0;
+  color: #a5aec2;
+}
+
+.task-count {
+  color: #aaa4ff;
+  font-size: 14px;
+}
+
+.task-form {
+  max-width: 600px;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #161d33;
+  border: 1px solid #303b58;
+  border-radius: 14px;
+}
+
+.task-form h3 {
+  margin: 0;
+}
+
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.kanban-column {
+  min-height: 350px;
+  padding: 16px;
+  background: #11182c;
+  border: 1px solid #303b58;
+  border-radius: 14px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #303b58;
+}
+
+.column-header h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.column-header span {
+  padding: 3px 9px;
+  background: #252e47;
+  border-radius: 20px;
+  color: #a5aec2;
+  font-size: 12px;
+}
+
+.column-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.task-card {
+  padding: 16px;
+  background: #1d2740;
+  border: 1px solid #394563;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+.task-card h4 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.task-card p {
+  margin: 0 0 14px;
+  color: #a5aec2;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.task-card small {
+  color: #858fa9;
+}
+
+.empty-column {
+  color: #858fa9;
+  font-size: 13px;
+  text-align: center;
+  padding: 24px 0;
+}
+
+@media (max-width: 800px) {
+  .kanban-board {
+    grid-template-columns: 1fr;
+  }
+
+  .kanban-column {
+    min-height: 150px;
+  }
+}
+
+/* Drag and drop */
+
+.task-card {
+  cursor: grab;
+  transition: opacity 0.15s, border-color 0.15s;
+}
+
+.task-card:active {
+  cursor: grabbing;
+}
+
+.task-card.dragging {
+  opacity: 0.35;
+}
+
+.kanban-column.drag-over {
+  border-color: #8178ff;
+  background: #1c2441;
+}
+
+/* Task actions */
+
+.task-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.task-card-header h4 {
+  margin: 0;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.task-actions button {
+  background: #303c59;
+  color: #e5e7eb;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.task-actions .delete-button {
+  background: #542d3a;
+  color: #ffb4b4;
+}
+
+/* Edit modal */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #000b;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.edit-modal {
+  width: 100%;
+  max-width: 480px;
+  padding: 28px;
+  background: #161d33;
+  border: 1px solid #46516e;
+  border-radius: 16px;
+  box-shadow: 0 25px 80px #0008;
+}
+
+.edit-modal h2 {
+  margin-top: 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modal-actions button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #46516e;
+  background: #303c59;
+  color: white;
+}
+
+.modal-actions button[type="submit"] {
+  background: #7668ed;
+  border-color: #7668ed;
+}
+
