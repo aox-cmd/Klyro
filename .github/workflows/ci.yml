@@ -39,6 +39,11 @@ jobs:
       - name: Build backend
         run: npm run build
 
+
+      - name: Run HTTP integration tests
+        run: npm run test:e2e
+
+
   frontend:
     name: Frontend Tests, Lint and Build
     runs-on: ubuntu-latest
